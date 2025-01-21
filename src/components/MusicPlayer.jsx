@@ -1,16 +1,32 @@
-import CoverArt from "./CoverArt";
-import SongTitle from "./SongTitle";
-import PlayControls from "./PlayControls";
-import VolumeControls from "./VolumeControls";
-import PlayListItem from "./PlayListItem";
+import CurrentlyPlaying from "./CurrentlyPlaying";
+import PlayList from "./PlayList";
 export default function MusicPlayer() {
+  const placeHolderPlayList = [
+    {
+      songTitle: 'Placeholder',
+      artist: 'The Placeholders',
+      songLength: '8:47'
+    },
+    {
+      songTitle: 'Placeholder',
+      artist: 'The Placeholders',
+      songLength: '8:47'
+    },
+    {
+      songTitle: 'Placeholder',
+      artist: 'The Placeholders',
+      songLength: '8:47'
+    },
+    {
+      songTitle: 'Placeholder',
+      artist: 'The Placeholders',
+      songLength: '8:47'
+    }
+  ];
   return (
-    <>
-      <CoverArt coverArt='placeholder.svg' />
-      <SongTitle songTitle='Placeholder' artist='The Placeholders' />
-      <PlayControls />
-      <VolumeControls />
-      <PlayListItem songTitle='Placeholder' artist='The Placeholders' songLength='8:47' />
-    </>
+    <div className="flex flex-wrap md:container md:mx-auto justify-center">
+      <CurrentlyPlaying coverArt="placeholder.svg" songTitle="Placeholder" artist="The Placeholders" />
+      <PlayList playList={placeHolderPlayList} />
+    </div>
   );
 }
