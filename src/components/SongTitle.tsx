@@ -1,4 +1,4 @@
-export default function SongTitle(props) {
+export default function SongTitle(props: { songTitle: string, artist: string }) {
     return (
         <div>
             <h2 className="text-3xl text-charcoal dark:text-bright-red font-bold my-3">{props.songTitle}</h2>

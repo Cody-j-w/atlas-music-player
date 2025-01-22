@@ -1,5 +1,6 @@
 import { Volume2 } from "lucide-react"
-export default function VolumeControls(props) {
+export default function VolumeControls() {
+
     return (
         <div className="flex dark:text-bright-red text-charcoal">
             <Volume2 />
