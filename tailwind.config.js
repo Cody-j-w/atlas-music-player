@@ -8,7 +8,8 @@ export default {
       colors: {
         'bright-red': '#FF0033',
         'charcoal': '#0F0F0F',
-        'silver': '#CCCCCC'
+        'silver': '#CCCCCC',
+        'chrome-gold': '#BBA53D'
       }
     },
   },
