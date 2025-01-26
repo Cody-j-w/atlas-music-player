@@ -21,15 +21,36 @@ export default function MusicPlayer() {
   const [playlist, setPlaylist] = useState<playlistTrack[]>([]);
   const [index, setIndex] = useState<number>(0);
   const [currentTrack, setCurrentTrack] = useState<string | null>(null)
+  const [shuffling, setShuffling] = useState<boolean>(false);
 
   const nextTrack = () => {
-    setIndex(index + 1);
-    setCurrentTrack(playlist[(index + 1) % playlist.length].id)
+    if (shuffling) {
+      const randIdx = Math.floor(Math.random() * playlist.length);
+      setIndex(randIdx);
+      setCurrentTrack(playlist[(randIdx % playlist.length)].id)
+    } else {
+      setIndex(index + 1);
+      setCurrentTrack(playlist[(index + 1) % playlist.length].id)
+    }
   }
 
   const prevTrack = () => {
-    setIndex(index - 1);
-    setCurrentTrack(playlist[(index - 1) % playlist.length].id)
+    if (shuffling) {
+      const randIdx = Math.floor(Math.random() * playlist.length)
+      setIndex(randIdx);
+      setCurrentTrack(playlist[(randIdx % playlist.length)].id)
+    } else {
+      setIndex(index - 1);
+      setCurrentTrack(playlist[(index - 1) % playlist.length].id)
+    }
+  }
+
+  const handleShuffling = () => {
+    if (shuffling) {
+      setShuffling(false);
+    } else {
+      setShuffling(true);
+    }
   }
 
   const randomTrack = () => {
@@ -58,7 +79,7 @@ export default function MusicPlayer() {
   }, []);
   return (
     <div className="flex flex-wrap md:container md:mx-auto justify-center">
-      <CurrentlyPlaying currentTrack={currentTrack} next={nextTrack} prev={prevTrack} random={randomTrack} />
+      <CurrentlyPlaying currentTrack={currentTrack} next={nextTrack} prev={prevTrack} random={randomTrack} handleShuffling={handleShuffling} />
       <PlayList playList={playlist} currentTrack={currentTrack} setCurrentTrack={setCurrentTrack} />
     </div>
   );
