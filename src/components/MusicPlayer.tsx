@@ -2,15 +2,7 @@ import { useState, useEffect } from "react";
 import CurrentlyPlaying from "./CurrentlyPlaying";
 import PlayList from "./PlayList";
 export default function MusicPlayer() {
-  type Song = {
-    id: string,
-    title: string,
-    artist: string,
-    genre: string,
-    duration: number,
-    cover: string,
-    song: string
-  }
+
   type playlistTrack = {
     id: string,
     title: string,
