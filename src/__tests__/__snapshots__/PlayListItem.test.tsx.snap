@@ -1,0 +1,85 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CoverArt snapshot 1`] = `
+<div>
+  <div
+    class="flex justify-between my-3 hover:bg-bright-red group border-2 p-2 border-silver text-chrome-gold"
+  >
+    <div>
+      <p
+        class="font-semibold text-lg bg-charcoal text-chrome-gold"
+      >
+        test One
+      </p>
+      <p
+        class="font-semibold text-lg bg-charcoal text-chrome-gold"
+      >
+        The Tests
+      </p>
+    </div>
+    <div>
+      <p
+        class="font-semibold text-lg bg-charcoal text-chrome-gold"
+      >
+        3:14
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SOngTitle snapshot 1`] = `
+<div>
+  <div
+    class="flex justify-between my-3 hover:bg-bright-red group border-2 p-2 border-silver text-chrome-gold"
+  >
+    <div>
+      <p
+        class="font-semibold text-lg bg-charcoal text-chrome-gold"
+      >
+        test One
+      </p>
+      <p
+        class="font-semibold text-lg bg-charcoal text-chrome-gold"
+      >
+        The Tests
+      </p>
+    </div>
+    <div>
+      <p
+        class="font-semibold text-lg bg-charcoal text-chrome-gold"
+      >
+        3:14
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SongTitle snapshot 1`] = `
+<div>
+  <div
+    class="flex justify-between my-3 hover:bg-bright-red group border-2 p-2 border-silver text-chrome-gold"
+  >
+    <div>
+      <p
+        class="font-semibold text-lg bg-charcoal text-chrome-gold"
+      >
+        test One
+      </p>
+      <p
+        class="font-semibold text-lg bg-charcoal text-chrome-gold"
+      >
+        The Tests
+      </p>
+    </div>
+    <div>
+      <p
+        class="font-semibold text-lg bg-charcoal text-chrome-gold"
+      >
+        3:14
+      </p>
+    </div>
+  </div>
+</div>
+`;

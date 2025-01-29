@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SongTitle snapshot 1`] = `
+<div>
+  <div>
+    <h2
+      class="text-3xl text-charcoal dark:text-bright-red font-bold my-3"
+    >
+      test One
+    </h2>
+    <p
+      class="text-xl text-charcoal dark:text-silver font-semibold"
+    >
+      The Tests
+    </p>
+  </div>
+</div>
+`;
