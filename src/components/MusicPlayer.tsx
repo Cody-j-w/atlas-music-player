@@ -52,7 +52,7 @@ export default function MusicPlayer() {
   }
 
   const getData = () => {
-    fetch('http://localhost:5173/api/v1/playlist',
+    fetch('/api/v1/playlist',
       {
         headers: {
           'Content-Type': 'application/json',

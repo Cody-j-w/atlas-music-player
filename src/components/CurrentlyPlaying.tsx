@@ -22,7 +22,7 @@ export default function CurrentlyPlaying(props: { currentTrack: string | null, n
     const [playback, setPlayback] = useState<number>(1);
 
     const getSongData = () => {
-        fetch(`http://localhost:5173/api/v1/songs/${props.currentTrack}`,
+        fetch(`/api/v1/songs/${props.currentTrack}`,
             {
                 headers: {
                     'Content-Type': 'application/json',
