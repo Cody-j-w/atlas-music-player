@@ -3,70 +3,70 @@ import { http, HttpResponse } from 'msw';
 
 const mockData = [
     {
-        id: "cm3ixp4sy0thg0cmtdzukgg56",
+        id: "1",
         title: "test 1",
         artist: "Test One",
         genre: "test",
         duration: 194
     },
     {
-        id: "kjy3ny0k1jt9p83srhdyg7mb",
+        id: "2",
         title: "test 2",
         artist: "Test Two",
         genre: "test",
         duration: 194
     },
     {
-        id: "soammx6oibpan244my4toqke",
+        id: "3",
         title: "test 3",
         artist: "Test Three",
         genre: "test",
         duration: 194
     },
     {
-        id: "a6pkp78whsyqdvpb5dxn64ss",
+        id: "4",
         title: "test 4",
         artist: "Test Four",
         genre: "test",
         duration: 194
     },
     {
-        id: "hdees11mmk6g078ewijlly1r",
+        id: "5",
         title: "test 5",
         artist: "Test Five",
         genre: "test",
         duration: 194
     },
     {
-        id: "sg9obf34n8qtnpq5t19w1b9a",
+        id: "6",
         title: "test 6",
         artist: "Test Six",
         genre: "test",
         duration: 194
     },
     {
-        id: "u7wkgyiyiz7xuxcueoxzb5d5",
+        id: "7",
         title: "test 7",
         artist: "Test Seven",
         genre: "test",
         duration: 194
     },
     {
-        id: "kp4z671fsjcmuobji96z6p95",
+        id: "8",
         title: "test 8",
         artist: "Test Eight",
         genre: "test",
         duration: 194
     },
     {
-        id: "ycvdpo1n76ap0x2u67gy9gab",
+        id: "9",
         title: "test 9",
         artist: "Test Nine",
         genre: "test",
         duration: 194
     },
     {
-        id: "jxjrthcu47rrpan548evirgu",
+        id: "10",
         title: "test 10",
         artist: "Test Ten",
         genre: "test",
@@ -74,10 +74,32 @@ const mockData = [
     }
 ];
 
+const mockIndexOne = {
+    id: "cm3ixp4sy0thg0cmtdzukgg56",
+    title: "test 1",
+    artist: "Test One",
+    genre: "test",
+    duration: 194,
+    cover: "placeholder.svg"
+}
+
 export const handlers = [
-    http.get('http://localhost:5173/api/v1/playlist', () => {
+    http.get('/api/v1/playlist', () => {
         return HttpResponse.json(mockData);
     }),
+    http.get(`/api/v1/songs/:id`, (req) => {
+        const { id } = req.params
+        const payload = {
+            id: id,
+            title: `test ${id}`,
+            artist: `Test ${id}`,
+            genre: "test",
+            duration: 194,
+            cover: "placeholder.svg"
+        }
+        console.log(payload)
+        return HttpResponse.json(payload);
+    })
 ];
 
 export const server = setupServer(...handlers);
